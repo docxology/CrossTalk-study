@@ -1,24 +1,47 @@
-# CrossTalk research tooling
+# CrossTalk on the Page
 
-This code supports provenance-aware linguistic and visual analysis of CrossTalk. It includes acquisition policy checks, issue and article indexing, PDF processing, and methods for analyzing text and page appearance.
+Open source research tools for studying language, evidence and visual design in *CrossTalk*, the defense software engineering journal.
 
-The included offline tests construct their own inputs. The historical study uses separately held source documents, source observations, and generated outputs. This checkout provides the code and synthetic tests needed to inspect the methods.
+The published 0.1.0 study examines 281 retained issue PDFs and 9,660 physical pages. It combines source indexing, native and OCR text extraction, corpus linguistics, statistical diagnostics and page-appearance analysis. The review register contains 2,708 complete AI-assisted article appraisals. Exact article counts cover 270 retained PDFs, with 11 open original print scopes. The historical issue and article totals are unresolved.
 
-Use Python 3.13 or newer. Run `crosstalk --help` with the package installed to inspect the entry point. Run `pytest` with the declared development dependencies to exercise the included fixtures.
+Read the [preprint and companion data on Zenodo](https://doi.org/10.5281/zenodo.24297224), inspect the [0.1.0 source](https://github.com/docxology/CrossTalk-study/tree/v0.1.0), or use [CITATION.cff](CITATION.cff) to cite the study.
 
-The version DOI for the edition 0.1.0 preprint is [10.5281/zenodo.24297224](https://doi.org/10.5281/zenodo.24297224).
+## Install and test
 
-See the [license scope](LICENSE_SCOPE.md) for inherited terms and the release terms for original contributions.
+Use [uv](https://docs.astral.sh/uv/getting-started/installation/) to install the locked dependencies. The package requires Python 3.13 or newer, and `.python-version` records the verified Python 3.15.2 interpreter.
 
-## Preprint build
+```sh
+git clone https://github.com/docxology/CrossTalk-study.git
+cd CrossTalk-study
+uv sync --locked
+uv run --locked crosstalk --help
+uv run --locked pytest
+```
 
-The [versioned build kit](publication/CrossTalk-v0.1.0-preprint-build-inputs.zip) supplies authored manuscript inputs,
-the Template projection entry point and checksum-bound figures. The files
-do not contain journal scans or raw extracted text. The page-shape figure
-draws four pooled darkness maps as coarse vector grids. Extract the kit into a copy of this
-checkout and follow its `BUILD.md`. The code and kit reproduce the preprint
-render. Reanalysis of the full corpus requires the separately sourced archival
-holdings and acquisition provenance. Read the paper's coverage and limitations
-before using the supplied artifact for historical inference.
+The offline tests construct synthetic inputs. The repository supplies tools for inventory validation, bounded acquisition, extraction, indexing, search, linguistic measures and statistical diagnostics. Inspect a command's required inputs with `uv run --locked crosstalk COMMAND --help`. The `--root` option selects the research project directory used by a command.
 
-The [tagged source for 0.1.0](https://github.com/docxology/CrossTalk-study/tree/v0.1.0) corresponds to the Zenodo record above. The Python tooling retains its independent package version, 0.5.0.
+The companion Zenodo deposit supplies derived measurements and source locators. Reanalyzing the historical corpus requires acquisition of the archival source documents and their provenance.
+
+## Reproduce the preprint
+
+The [versioned build kit](publication/CrossTalk-v0.1.0-preprint-build-inputs.zip) contains the authored manuscript, projection script, four graphical abstracts, ten analysis figures and their checksums.
+
+For the published 0.1.0 render, use the linked 0.1.0 source tag. Extract the kit at the root of a clean checkout, then follow the extracted `BUILD.md`.
+
+```sh
+uv run --locked python -m zipfile -e publication/CrossTalk-v0.1.0-preprint-build-inputs.zip .
+```
+
+`BUILD.md` pins [docxology Template](https://github.com/docxology/template) at `f89cd527c7c688b9d67a995d584e026b2b5ccaab` and records the Pandoc, pandoc-crossref and XeLaTeX versions used for the verified render. Its Stage 03 command produces `output/pdf/Preprint_combined.pdf`. The included figures draw from original study measurements and coarse aggregate page maps.
+
+The study edition is 0.1.0. The Python tooling has its own package version, 0.5.0.
+
+## License and attribution
+
+CrossTalk's original software, synthetic tests and software documentation are licensed under [Apache-2.0](LICENSE). The original manuscript, authored figures and derived study compilation are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+[LICENSE_SCOPE.md](LICENSE_SCOPE.md) identifies the material covered by each grant, the inherited Template notices and third-party source terms.
+
+## Contributing
+
+Use [GitHub issues](https://github.com/docxology/CrossTalk-study/issues) for reproducible bugs, documentation corrections and historical source leads. Include the command, source locator or figure involved and the evidence needed to reproduce the observation. Pull requests should preserve provenance, source distinctions and explicit coverage limits, and include relevant validation results.
