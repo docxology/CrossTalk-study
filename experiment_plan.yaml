@@ -1,0 +1,17 @@
+# CrossTalk adapted this configuration from the Template code-project exemplar.
+conditions:
+  - name: native_text_baseline
+    role: reference
+    description: "Native PDF text with all quality and layout flags retained."
+  - name: reviewed_article_corpus
+    role: proposed
+    description: "Planned manually validated article and region corpus."
+metrics:
+  primary:
+    name: reviewed_page_coverage
+    direction: maximize
+protocol: "Reconcile holdings before inference; validate article/visual annotations on a stratified held-out set; compare raw and cleaned text by period and genre. Advanced conditions are planned, not executed."
+expected_figures: [fig:coverage_audit, fig:visual_contact_sheet]
+expected_tables: [tbl:holdings, tbl:extraction_quality]
+baselines: [native_text_baseline]
+ablations: []

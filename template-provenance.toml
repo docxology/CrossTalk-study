@@ -1,0 +1,6 @@
+schema_version = 1
+source_repository = "https://github.com/docxology/template"
+source_commit = "f89cd527c7c688b9d67a995d584e026b2b5ccaab"
+source_exemplar = "projects/templates/template_code_project"
+adaptation = "Standalone structure, thin orchestrators, src tests, coverage gate, manuscript and generated-output separation; optimization example replaced. No template publication identity inherited."
+created = "2026-11-05"

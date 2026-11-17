@@ -1,0 +1,12 @@
+# CrossTalk adapted this configuration from the Template code-project exemplar.
+domain: code_research
+display_name: CrossTalk Literature and Visual Research
+required_packages: [pymupdf, pillow, pydantic, pytest]
+preferred_outputs: [html, pdf, docx]
+validation_gates: [experiment_method_design, artifact_manifest, evidence_grounding, render_validation, publication_readiness]
+figure_types: [temporal_topic_atlas, visual_contact_sheet, coverage_audit]
+citation_policy: official_or_scholarly
+source_policy: "Official CrossTalk and Calhoun issue records; source PDFs and page-grounded annotations."
+review_gates: [experiment_method_design, evidence_grounding, publication_readiness]
+artifact_expectations: [output/reports/analysis.html, output/data/downloads.json]
+llm_prompt_guidance: "Never invent missing issue records, article boundaries or findings. Interpret only validated page-grounded evidence."
