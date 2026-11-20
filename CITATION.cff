@@ -2,7 +2,15 @@ cff-version: 1.2.0
 message: "Cite this edition by its version DOI. Cite the individual journal sources for substantive claims."
 title: "CrossTalk on the Page"
 version: 0.1.0
+date-released: "2026-11-17"
 doi: "10.5281/zenodo.24297224"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24297224"
+    description: "Zenodo archive of edition 0.1.0"
+  - type: doi
+    value: "10.5281/zenodo.24297223"
+    description: "Zenodo concept DOI for all editions"
 authors:
   - family-names: Friedman
     given-names: Daniel Ari
@@ -10,3 +18,9 @@ authors:
     orcid: https://orcid.org/0000-0001-6232-9096
 repository-code: "https://github.com/docxology/CrossTalk-study"
 url: "https://doi.org/10.5281/zenodo.24297224"
+keywords:
+  - CrossTalk
+  - software engineering
+  - literature review
+  - corpus linguistics
+  - visual analysis
