@@ -1,0 +1,27 @@
+# Reading the journal as a record of practice {#sec:introduction}
+
+The 1968 NATO conference on software engineering treated design, production, and service as linked problems and recorded disagreement about how to organize them [@naur_randell1969]. Brooks later distinguished the work of specifying and designing a complex system from work caused by its tools and representation [@brooks1987]. Defense acquisition added a related tension. The Defense Science Board's 1994 report on commercial software urged changes to architecture, early engineering, and iterative development to make procurement and fielding more adaptable [@dsb1994commercial]. The persistence of these concerns makes it possible to ask a historical question about CrossTalk. When authors describe a recurring difficulty, do they change the proposed remedy, the evidence they offer, or the language they use to make the case?
+
+CrossTalk identifies itself as a journal of defense software engineering [@crosstalk_home]. The Naval Postgraduate School describes the current journal as open access and peer reviewed. Historical issues supply their own evidence about editorial roles and review procedures. Its issues carry technical features, sponsor editorials, letters, practitioner reports, and BackTalk. Each genre provides a different occasion for a claim. A signed editorial can establish what its sponsor advocated, a field report can document what a team says it tried, and a comparative study can estimate an effect when its design supports the inference. Genre scholarship connects recurrent forms and recognized communicative purposes [@orlikowski_yates1994]. Here the distinctions guide both the review of claims and the interpretation of page patterns. A technical diagram, recurring masthead, and cover illustration can occupy similar areas of a page while doing different work.
+
+## Research questions {#sec:questions}
+
+1. Which problems, proposals, and forms of evidence recur in the retained journal?
+2. Where do authors report observed outcomes, and what would be needed to compare their results across settings?
+3. How do engineering vocabulary and the language of risk, capability, and obligation vary with period, genre, and text availability?
+4. How do page layouts and visual objects communicate a technical argument, present evidence, or mark an editorial role?
+5. Which differences survive explicit changes in issue weighting, coverage, extraction layer, and page eligibility?
+
+An increase in a security phrase can follow a themed issue, a new editorial label, or a shift in spelling and terminology. A change in visual density can follow production technology, scan quality, or a different mix of front and interior pages. The study treats these mechanisms as competing explanations and uses exact issue and page keys to inspect cases. SWEBOK provides a contemporary reference for the names of engineering domains [@swebok2024]. The domain names serve as retrieval aids across the historical material. Period-specific usage and article-level meaning require inspection.
+
+## Scope and contribution {#sec:scope}
+
+The journal website and its Calhoun series define the initial collection, supplemented by independently reconciled holdings [@crosstalk_home; @nps_series]. The historical denominator remains unresolved. Petersen's twentieth-anniversary account dates first circulation to 22 July 1988 and describes artificial intelligence as an early subject [@petersen2008]. The account is later testimony, inspected on printed page 13 (physical PDF page 14). It gives an explicit reason to test any apparent first occurrence against gaps in early holdings and text retrieval.
+
+The project follows the distinction between systematic mapping and deeper review in software engineering evidence synthesis [@petersen_vakkalanka_kuzniarz2015]. Its journal-bounded map enumerates sources, physical pages, article boundaries where adjudicated, and retrieval evidence. Its full-text appraisals identify what selected contributions claim, the kind of support they offer, and limits on inference. PRISMA informs documentation of identification, exclusions, and eligible units [@page2021prisma]. The data statement makes corpus, language, and acquisition constraints explicit [@bender_friedman2018].
+
+## Status of this manuscript {#sec:status}
+
+All {{PILOT_ISSUES}} captured NPS issue PDFs have verified current native extraction covering {{NPS_PHYSICAL_PAGES}} physical pages. The study also incorporates separately sourced issues, admitted OCR, whole-page appearance measurements, two-view native category retrieval, and {{CASE_PAGES_WORD}} source-linked physical-page observations supporting {{CASE_CLAIMS_WORD}} bounded claims. The current article and reading ledgers report the distinct denominators for the retained corpus. The archival map, text measures, and visual measurements remain separately indexed so the availability of one layer cannot fill a gap in another.
+
+The corpus analyses are exploratory. Development used previously inspected material, and independent human appraisal and transcription evaluation remain open. The new issue-balanced topic profiles measure literal language and support source retrieval, in keeping with problem-specific validation for text analysis [@grimmer_stewart2013]. The following sections describe the acquisition and review methods, the study findings, and the remaining uncertainties.

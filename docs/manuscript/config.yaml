@@ -1,0 +1,40 @@
+paper:
+  title: "CrossTalk on the Page"
+  subtitle: "How defense software engineering was written and illustrated"
+  version: "{{STUDY_EDITION}}"
+  date: "{{SNAPSHOT_DATE}} · Public edition {{STUDY_EDITION}}"
+  cover:
+    image: "{{GA01_PATH}}"
+    alt: "{{GA01_ALT}}"
+authors:
+  - name: "Daniel Ari Friedman"
+    affiliation: "Active Inference Institute"
+    orcid: "0000-0001-6232-9096"
+publication:
+  release_status: "published"
+  intended_version: "{{STUDY_EDITION}}"
+  doi: "{{ZENODO_VERSION_DOI}}"
+  doi_status: "Published on Zenodo"
+  version_doi: "{{ZENODO_VERSION_DOI}}"
+  version_record: "{{ZENODO_VERSION_RECORD}}"
+  transmission_bookends:
+    enabled: false
+keywords: [CrossTalk, software engineering, literature review, corpus linguistics, visual analysis]
+metadata:
+  language: en
+  documentclass: article
+  fontsize: 11pt
+  geometry: "margin=0.35in,footskip=0.18in"
+render:
+  formats: {pdf: true, html: false, slides: false, docx: false, epub: false}
+rendering:
+  section_breaks: false
+  include_date: true
+  cover_height_fraction: 0.56
+  figure_height_fraction: 0.78
+  front_matter_figure_height_fraction: 0.83
+llm:
+  reviews: {enabled: false}
+  translations: {enabled: false}
+testing:
+  max_test_failures: 0

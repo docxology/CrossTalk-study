@@ -1,0 +1,172 @@
+# Sources for the published edition’s reported figures and historical references.
+claims:
+  - claim_id: native-text-pages
+    kind: number
+    value: "7102"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v69/ga02-language-v69.pdf"
+  - claim_id: ocr-only-pages
+    kind: number
+    value: "2539"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v69/ga02-language-v69.pdf"
+  - claim_id: admitted-text-percent
+    kind: number
+    value: "99.80%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v103/ga04-original-print-scope.pdf (9641 / 9660)"
+  - claim_id: exact-retained-percent
+    kind: number
+    value: "96.09%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v103/ga04-original-print-scope.pdf (270 / 281)"
+  - claim_id: exact-priority-percent
+    kind: number
+    value: "93.67%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v103/ga04-original-print-scope.pdf (148 / 158)"
+  - claim_id: direct-reach-percent
+    kind: number
+    value: "84.47%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v103/ga04-original-print-scope.pdf (8160 / 9660)"
+  - claim_id: native-security-log-ratio-magnitude
+    kind: number
+    value: "3.83"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "Native sensitivity figure, security in raw native text (signed ratio −3.83)."
+  - claim_id: native-agile-log-ratio-magnitude
+    kind: number
+    value: "8.70"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "Native sensitivity figure, agile in raw native text (signed ratio −8.70)."
+  - claim_id: equal-issue-native-delivery-percent
+    kind: number
+    value: "8.6%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: pooled-native-delivery-percent
+    kind: number
+    value: "34.1%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: pooled-ocr-delivery-percent
+    kind: number
+    value: "27.0%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: cybersecurity-2010s-percent
+    kind: number
+    value: "22.8%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: intelligent-systems-recent-percent
+    kind: number
+    value: "17.3%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: intelligent-systems-year-block-low
+    kind: number
+    value: "4.9%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: intelligent-systems-year-block-high
+    kind: number
+    value: "30.2%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v15/topic-map-v15.pdf"
+  - claim_id: intelligent-systems-without-ai-early
+    kind: number
+    value: "3.5%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v16/topic-influence-v16.pdf"
+  - claim_id: intelligent-systems-without-ai-recent
+    kind: number
+    value: "14.1%"
+    artifact_path: publication/CrossTalk-v0.1.0-preprint-build-inputs.zip
+    source: "output/figures/coverage-v16/topic-influence-v16.pdf"
+  - claim_id: leave-one-year-out-low
+    kind: number
+    value: "6.2%"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: leave-one-year-out-high
+    kind: number
+    value: "19.9%"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: assurance-rate-percent
+    kind: number
+    value: "8.3%"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: assurance-without-top-phrase
+    kind: number
+    value: "3.4%"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: phrase-screen-reviewed-contexts
+    kind: number
+    value: "18"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: within-issue-comparison-cohort
+    kind: number
+    value: "277"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: delivery-page-position-difference
+    kind: number
+    value: "7.6"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: measurement-page-position-difference
+    kind: number
+    value: "6.3"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: delivery-page-position-interval-low
+    kind: number
+    value: "5.4"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: delivery-page-position-interval-high
+    kind: number
+    value: "9.7"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: measurement-page-position-interval-high
+    kind: number
+    value: "7.7"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: later-pages-eligible
+    kind: number
+    value: "7617"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: median-front-darkness-difference
+    kind: number
+    value: "68.9"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=10"
+  - claim_id: center-to-ring-contrast-magnitude
+    kind: number
+    value: "4.4"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "Published PDF page 11, signed contrast −4.4 points."
+  - claim_id: center-to-ring-contrast-interval-low-magnitude
+    kind: number
+    value: "5.8"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "Published PDF page 11, signed interval lower bound −5.8 points."
+  - claim_id: unverified-april-1996-end-folio
+    kind: number
+    value: "27"
+    artifact_path: docs/reproduction/manuscript.md
+    source: "https://zenodo.org/records/24297224/files/CrossTalk-on-the-Page-v0.1.0.pdf#page=11"
+  - claim_id: petersen-physical-pdf-page
+    kind: number
+    value: "14"
+    artifact_path: docs/manuscript/references.bib
+    source: "Petersen 2008, physical PDF page 14, printed page 13"

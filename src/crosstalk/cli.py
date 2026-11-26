@@ -23,6 +23,7 @@ from crosstalk.publisher_cli import publisher_app
 from crosstalk.statistical_analysis import analyze_statistics
 from crosstalk.statistical_records import BootstrapSettings
 from crosstalk.statistical_visual_report import render_statistical_report
+from crosstalk.template_projection import MANUSCRIPT_DIR
 from crosstalk.text_index import build_text_index
 from crosstalk.text_search import search_pages
 
@@ -122,13 +123,14 @@ def dossier(
         str, typer.Option(help="Known source revision label; exact input hashes are recorded.")
     ] = "Uncommitted working tree; exact input digests recorded",
 ) -> None:
-    """Render an older dossier project. Current manuscripts use docxology/template Stage 03."""
+    """Render a project with a JSON dossier manifest."""
     if any(
-        (root / "manuscript" / name).is_file()
+        (root / directory / name).is_file()
+        for directory in (MANUSCRIPT_DIR, "manuscript")
         for name in ("80_evidence_figures.md", "90_appendix_inventory.md")
     ):
         raise typer.BadParameter(
-            "Use docxology/template Stage 03 for this manuscript. See docs/template-render.md.",
+            "Use docxology/template for the study manuscript. See docs/reproduction/manuscript.md.",
             param_hint="--root",
         )
     summary = render_project_dossier(root, revision)
