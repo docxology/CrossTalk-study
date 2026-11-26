@@ -17,8 +17,8 @@ from crosstalk.template_publication import (
     Document,
     bindings_csv,
     projection_lock,
+    publish_generated_file,
     publish_manuscript,
-    publish_variables,
 )
 from crosstalk.template_records import (
     Artifact,
@@ -38,6 +38,7 @@ from crosstalk.template_text import (
     substitute,
 )
 
+MANUSCRIPT_DIR: Final = "docs/manuscript"
 IMPLEMENTATION_FILES: Final = (
     "src/crosstalk/__init__.py",
     "src/crosstalk/template_records.py",
@@ -72,7 +73,7 @@ class LoadedArtifact:
 
 def _source_documents(root: Path) -> tuple[Document, ...]:
     """Select real authored sections, preamble/config and every bibliography; never dossier JSON."""
-    source = project_path(root, "manuscript")
+    source = project_path(root, MANUSCRIPT_DIR)
     paths: list[Path] = []
     size = 0
     with os.scandir(source) as entries:
@@ -132,10 +133,25 @@ def _figure_paths(loaded: tuple[LoadedArtifact, ...], manifest_sha: Digest) -> t
     for row in loaded:
         if row.artifact.path.startswith("output/figures/"):
             suffix = Path(row.artifact.path).suffix.lower()
-            name = row.artifact.kind.value + "-" + row.artifact.key + suffix
+            name = row.artifact.key + suffix
             relative = "output/figures/template-study/" + manifest_sha + "/" + name
             figures.append(Figure(row.artifact, "../" + relative.removeprefix("output/")))
     return tuple(figures)
+
+
+def _publish_figure_registry(root: Path, figures: tuple[Figure, ...]) -> Binding:
+    """Expose the selected figure labels and text to Template's validation."""
+    registry = {
+        "fig:" + figure.source.key: {
+            "filename": figure.path.removeprefix("../figures/"),
+            "caption": figure.source.caption,
+            "alt_text": figure.source.alt,
+            "generated_by": "scripts/z_generate_manuscript_variables.py",
+        }
+        for figure in figures
+    }
+    raw = (json.dumps(registry, indent=2, ensure_ascii=False) + "\n").encode()
+    return publish_generated_file(root, "output/figures/figure_registry.json", raw)
 
 
 def _hydrate(
@@ -173,7 +189,7 @@ def _projection(request: ProjectionRequest) -> ProjectionRun:
     loaded = _load(root, manifest)
     sources = _source_documents(root)
     inputs = tuple(Binding(row.artifact.path, row.artifact.sha256) for row in loaded)
-    inputs += tuple(Binding("manuscript/" + row.name, sha256(row.raw)) for row in sources)
+    inputs += tuple(Binding(f"{MANUSCRIPT_DIR}/{row.name}", sha256(row.raw)) for row in sources)
     inputs += tuple(
         Binding(path, sha256(read_file(project_path(root, path)))) for path in IMPLEMENTATION_FILES
     )
@@ -210,8 +226,13 @@ def _projection(request: ProjectionRequest) -> ProjectionRun:
         for figure in figures
     )
     outputs = publish_manuscript(root, documents)
-    outputs += (publish_variables(root, variable_bytes), manifest_copy, inventory_copy)
+    outputs += (
+        publish_generated_file(root, "output/data/manuscript_variables.json", variable_bytes),
+        manifest_copy,
+        inventory_copy,
+    )
     outputs += figure_copies
+    outputs += (_publish_figure_registry(root, figures),)
     _recheck(request, inputs)
     record = {
         "schema_version": 1,

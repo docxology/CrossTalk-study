@@ -134,19 +134,18 @@ def publish_manuscript(root: Path, documents: tuple[Document, ...]) -> tuple[Bin
     return outputs
 
 
-def publish_variables(root: Path, raw: bytes) -> Binding:
-    """Preserve any previous standard variable file before publishing its exact replacement."""
-    relative = "output/data/manuscript_variables.json"
+def publish_generated_file(root: Path, relative: str, raw: bytes) -> Binding:
+    """Preserve an earlier generated file before publishing its exact replacement."""
     path = project_path(root, relative)
-    _ = directory(root, "output/data")
+    _ = directory(root, path.parent.relative_to(root).as_posix())
     if os.path.lexists(path):
         previous = read_file(path)
         if previous == raw:
             return Binding(relative, sha256(raw))
         history = directory(root, "output/template-history/" + uuid4().hex)
         if read_file(path) != previous:
-            raise ProjectionError("previous variable file changed before preservation")
-        _ = path.rename(history / "manuscript_variables.json")
+            raise ProjectionError("previous generated file changed before preservation")
+        _ = path.rename(history / path.name)
         _sync(history)
     return immutable(root, relative, raw)
 

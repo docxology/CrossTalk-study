@@ -2,7 +2,16 @@
 conditions:
   - name: native_text_baseline
     role: reference
-    description: "Native PDF text with all quality and layout flags retained."
+    description: "Observed native PDF text with all layout and quality flags retained."
+  - name: wrapper_excluded_native
+    role: variant
+    description: "Native text after excluding source wrappers."
+  - name: native_rich
+    role: variant
+    description: "The native-rich comparison cohort with its own eligible issue counts."
+  - name: targeted_ocr
+    role: variant
+    description: "The cohort with targeted OCR inputs and its own eligible issue counts."
   - name: reviewed_article_corpus
     role: proposed
     description: "Planned manually validated article and region corpus."
@@ -10,8 +19,8 @@ metrics:
   primary:
     name: reviewed_page_coverage
     direction: maximize
-protocol: "Reconcile holdings before inference; validate article/visual annotations on a stratified held-out set; compare raw and cleaned text by period and genre. Advanced conditions are planned, not executed."
-expected_figures: [fig:coverage_audit, fig:visual_contact_sheet]
-expected_tables: [tbl:holdings, tbl:extraction_quality]
+protocol: "Reconcile holdings before inference. Compare the observed views with issue-level resampling within each eligible cohort. Direct article reach and exact attested issue counts have separate denominators."
+expected_figures: [fig:native-sensitivity-and-ocr-contrasts, fig:ga04_evidencematrix]
+expected_tables: []
 baselines: [native_text_baseline]
-ablations: []
+ablations: [wrapper_excluded_native, native_rich, targeted_ocr]
