@@ -1,6 +1,6 @@
 # Render the study manuscript
 
-The maintained [manuscript](../manuscript/) contains the ordered sections, configuration, preamble and bibliography. The [edition manifest](template-render-inputs-v0.1.0.csv) binds the published inventory, four graphical abstracts, ten body figures, derived inputs and prepared display values to the study edition.
+The maintained [manuscript](../manuscript/README.md) contains the ordered sections, configuration, preamble and bibliography. The [edition manifest](template-render-inputs-v0.1.0.csv) binds the published inventory, four graphical abstracts, ten body figures, derived inputs and prepared display values to the study edition.
 
 Start in a clean `CrossTalk-study` checkout. Install uv, Pandoc 3.14, pandoc-crossref 0.3.26 built with Pandoc 3.14, and XeLaTeX with the packages listed by Template's render preflight. The commands below use the Template revision tested for this checkout. [Template prerequisites](https://github.com/docxology/template/blob/87704feae0a4490ef7dad9c931d268e8c30273c2/docs/RUN_GUIDE.md)
 
